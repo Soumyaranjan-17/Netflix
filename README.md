@@ -37,21 +37,14 @@ This project is a clone of the Netflix website, created using HTML, CSS, and Jav
 ## How to Run the Project
 
 1\. **Clone the Repository**:
-
-   ```bash
-
-   git clone https://github.com/your-username/your-repo-name.git
-
-   ```
-
+   ```
+   git clone https://github.com/Soumyaranjan-17/Netflix/
+   ```
 2\. **Navigate to the Project Directory**:
 
-   ```
-
-   cd your-repo-name
-
-   ```
-
+   ```
+   cd Netflix
+   ```
 3\. **Open the Index File**:
 
    Open the `index.html` file in your web browser.
