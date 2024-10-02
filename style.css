@@ -1,13 +1,10 @@
 * {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'poppins';
   font-family: poppins;
-  /* font-weight: bold; */
-  /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, 'poppins'; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   color: white;
-  /* align-items: center; */
-  /* ; */
 }
 
 body {
@@ -20,7 +17,7 @@ section, footer{
 
 #hero {
   margin: auto;
-  height: 650px;
+  min-height: 90vh;
   max-height: 140vw;
   background-image: url(Image/IN-en-20240506-POP_SIGNUP_TWO_WEEKS-perspective_WEB_ebbef551-d229-4865-8cdc-fb00f8960227_small.jpg),
     radial-gradient(rgba(0, 0, 0, 0.534), black);
