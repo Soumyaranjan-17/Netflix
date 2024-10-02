@@ -46,7 +46,7 @@ This project is a clone of the Netflix website, created using HTML, CSS, and Jav
 
 2\. **Navigate to the Project Directory**:
 
-   ```bash
+   ```
 
    cd your-repo-name
 
