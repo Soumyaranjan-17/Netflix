@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel with Arrows</title>
+    <style>
+      /* Container for carousel and arrows */
+      .carousel-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden; /* Hide overflow */
+      }
+
+      /* Carousel */
+      .carousel {
+        display: flex;
+        transition: transform 0.3s ease-in-out; /* Smooth scrolling */
+      }
+
+      /* Individual card styling */
+      .trending-card {
+        min-width: 250px; /* Set the width of each card */
+        height: 300px;
+        background-size: cover;
+        background-position: center;
+        margin: 0 10px;
+      }
+
+      /* Arrow buttons */
+      .carousel-arrow {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 1;
+        display: none;
+      }
+
+      /* Left arrow */
+      .left-arrow {
+        left: 10px;
+      }
+
+      /* Right arrow */
+      .right-arrow {
+        right: 10px;
+      }
+
+      /* Show the arrows when the carousel is not at the ends */
+      .carousel-container:hover .carousel-arrow {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="carousel-container">
+      <div class="carousel">
+        <div
+          class="trending-card"
+          no="1"
+          title="Animal"
+          style="background-image: url('Image/CardAnimal.jpg')"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="2"
+          title="IC814"
+          style="background-image: url('Image/CardIC814.jpg')"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="3"
+          title="Indian2"
+          style="background-image: url('Image/CardIndian2.jpg')"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="2"
+          title="IC814"
+          style="background-image: url(Image/CardIC814.jpg)"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="2"
+          title="IC814"
+          style="background-image: url(Image/CardIC814.jpg)"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="2"
+          title="IC814"
+          style="background-image: url(Image/CardIC814.jpg)"
+        >
+          <div class="title"></div>
+        </div>
+        <div
+          class="trending-card"
+          no="2"
+          title="IC814"
+          style="background-image: url(Image/CardIC814.jpg)"
+        >
+          <div class="title"></div>
+        </div>
+        <!-- Add more cards as needed -->
+      </div>
+      <!-- Left and right arrows -->
+      <button class="carousel-arrow left-arrow">&lt;</button>
+      <button class="carousel-arrow right-arrow">&gt;</button>
+    </div>
+
+    <script>
+      const carousel = document.querySelector(".carousel");
+      const leftArrow = document.querySelector(".left-arrow");
+      const rightArrow = document.querySelector(".right-arrow");
+      let currentPosition = 0;
+      const cardWidth = 250; // Card width + margin (adjust if needed)
+      const totalCards = document.querySelectorAll(".trending-card").length;
+      const carouselWidth = totalCards * cardWidth;
+      const containerWidth = document.querySelector(".carousel-container").clientWidth;
+
+      // Update arrow visibility based on the current position
+      function updateArrows() {
+        if (currentPosition === 0) {
+          leftArrow.style.display = "none";
+        } else {
+          leftArrow.style.display = "block";
+        }
+
+        if (currentPosition <= -(carouselWidth - containerWidth)) {
+          rightArrow.style.display = "none";
+        } else {
+          rightArrow.style.display = "block";
+        }
+      }
+
+      // Move carousel to the left
+      leftArrow.addEventListener("click", () => {
+        if (currentPosition < 0) {
+          currentPosition += cardWidth;
+          carousel.style.transform = `translateX(${currentPosition}px)`;
+        }
+        updateArrows();
+      });
+
+      // Move carousel to the right
+      rightArrow.addEventListener("click", () => {
+        if (currentPosition > -(carouselWidth - containerWidth)) {
+          currentPosition -= cardWidth;
+          carousel.style.transform = `translateX(${currentPosition}px)`;
+        }
+        updateArrows();
+      });
+
+      // Initialize the carousel by updating arrow visibility
+      updateArrows();
+    </script>
+  </body>
+</html>
