@@ -1,8 +1,8 @@
-# NETFLIX 
+# [NETFLIX](https://netfilxindia.netlify.app/)
 
 ## Project Overview
 
-This project is a clone of the Netflix website, created using HTML, CSS, and JavaScript. It aims to replicate the user interface and some key features of the original Netflix website.
+This project is a clone of the Netflix website, created using HTML, CSS, and JavaScript. It aims to replicate the user interface and some key features of the original [NETFLIX](https://netfilxindia.netlify.app/) website.
 
 ## Technologies Used
 
@@ -38,12 +38,12 @@ This project is a clone of the Netflix website, created using HTML, CSS, and Jav
 
 1\. **Clone the Repository**:
    ```
-   git clone https://github.com/Soumyaranjan-17/Netflix/
+git clone https://github.com/Soumyaranjan-17/Netflix/
    ```
 2\. **Navigate to the Project Directory**:
 
    ```
-   cd Netflix
+cd Netflix
    ```
 3\. **Open the Index File**:
 
