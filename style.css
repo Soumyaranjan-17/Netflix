@@ -196,7 +196,7 @@ button:hover {
   --curve-height: 5vw;
 
   position: relative;
-  margin-top: calc(var(--curve-height) * -1);
+  /* margin-top: calc(var(--curve-height) * -1); */
   width: 100%;
   height: var(--curve-height);
   border-top-left-radius: 50% 100%;
